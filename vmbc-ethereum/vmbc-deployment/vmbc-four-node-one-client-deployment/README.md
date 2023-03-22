@@ -15,12 +15,12 @@ Make sure that you implement all the required prerequisites. See [Deployment Pre
 
 You can deploy four Replica nodes and one Client node on Minikube or EKS.
 
-#### Run the following command to deploy Minikube. 
+#### Run the following command to deploy on Minikube. 
 ```sh
 helm install <name of blockchain> . --set global.imageCredentials.registry=<registry address> --set global.imageCredentials.username=<username> --set global.imageCredentials.password=<password>
 ```
 
-#### Run the following command to deploy EKS.
+#### Run the following command to deploy on EKS.
 ```sh
 helm install <name of blockchain> . --set global.imageCredentials.registry=<registry address> --set global.imageCredentials.username=<username> --set global.imageCredentials.password=<password> --set global.storageClassName=gp2 --set resources.replica.cpuRequest=10000m --set resources.replica.cpuLimit=10000m --set resources.replica.memoryRequest=56Gi --set resources.replica.memoryLimit=56Gi --set resources.client.cpuRequest=5000m --set resources.client.cpuLimit=5000m --set resources.client.memoryRequest=28Gi --set resources.client.memoryLimit=28Gi
 ```
@@ -71,4 +71,4 @@ You can customize your deployment configurations. A list of configurations is av
 | genesisBlock.timestamp           | Blockchain creation time in UTC, 24 hours format - YYYY-MM-DD hh:mm:ss | 2022-12-02 00:01:00 | Optional |
 
 ## Troubleshooting
-The most common problems and errors are addressed with probable solutions to troubleshoot the problem. See, [Troubleshooting](./../Troubleshooting.md).
+The most common problems and errors are addressed in the troubleshoting guide along with their probable solutions and steps to troubleshoot those issues. See, [Troubleshooting](./../Troubleshooting.md).
