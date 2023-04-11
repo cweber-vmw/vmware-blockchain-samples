@@ -46,7 +46,7 @@ Every message transmitted on the Replica Network is then signed with the Replica
 ##### Transaction Signing and Verification
 VMware Blockchain for Ethereum supports transaction signing using the same method supported in public Ethereum. The dApp wallet application cryptographically signs transactions. The Replica Network verifies the signature before executing the command.
 
-Transaction signing protects from non-repudiation. This mechanism lets the platform verify that every command originates from the right place so that commands are executed successfully and not rejected by the Replica Network.
+Transaction signing protects against non-repudiation. This mechanism lets the platform verify that every command originates from the valid signers so that commands are executed successfully and not rejected by the Replica Network.
 
 #### Authenticated Key-Value Ledger
-VMware Blockchain uses a key-value database, RocksDB, for persistent storage. Each Replica node contains RocksDB with the key-value pairs for every number of blocks. A checkpoint is created, and that checkpoint is cryptographically signed by the private key of each Replica node. The VMware Blockchain provides data integrity using a consensus mechanism.
+VMware Blockchain uses a key-value database, RocksDB, for persistent storage. Each Replica node contains a RocksDB database with the key-value pairs for every number of blocks. A checkpoint is created, and that checkpoint is cryptographically signed by the private key of each Replica node. The VMware Blockchain provides data integrity using a consensus mechanism.
